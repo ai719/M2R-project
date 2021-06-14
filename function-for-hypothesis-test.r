@@ -46,7 +46,7 @@ testing_csr <- function(x,y,nsim,alpha)
   # sort so in order
   sort(t_sim_vals);
   # as 2 tailed test
-  percentile = floor(100*(1 - alpha/2)) + 1 ;
+  percentile = floor(nsim*(1 - alpha/2)) + 1 ;
   c_alpha_over_2 = t_sim_vals[percentile] ;
   # output if in rekection region or not
   if(c_alpha_over_2<t){
